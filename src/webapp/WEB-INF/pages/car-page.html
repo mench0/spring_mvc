@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars page</title>
+</head>
+<body>
+<b>Привет! Давно не было тебя в уличных гонках!</b>
+
+<table border="1" style="width:300px" >
+    <tr>
+        <th>Model</th>
+        <th>Color</th>
+        <th>Speed</th>
+    </tr>
+    <tr th:each="car : ${allCars}">
+        <td th:text="${car.model}">Model</td>
+        <td th:text="${car.color}">Color</td>
+        <td th:text="${car.speed}">Speed</td>
+    </tr>
+</table>
+</body>
+</html>
